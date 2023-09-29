@@ -1,0 +1,265 @@
+html,body {
+   width: 100%;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   overflow-x: hidden;
+}
+
+#Header {
+  border-bottom: solid;
+  height: 10vh;
+  background-color: #FFFFFF;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#Header img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#Header #Bulaloi-Text {
+  width: 120px;
+  height: 65px;
+  cursor: pointer;
+}
+
+#OffCanvas  {
+  color: white;
+}
+
+.offcanvas-header, .offcanvas-body {
+  background-color: #313131;
+}
+
+.offcanvas-header {
+  border-bottom: solid;
+  color: white;
+}
+
+.offcanvas-body {
+	padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.offcanvas-body .dropdown-button  {
+	padding: 0;
+	margin: 0;
+}
+
+.offcanvas-body .btn {
+	text-align: left;
+  background-color: #333333;
+  border-radius: 0 !important;
+  border-right: none;
+  border-left: none;   
+  border-top: none;
+  border-color: white;
+}
+
+.offcanvas-body .btn p {
+	position: relative;
+	left: 15px;
+	top: 7px;
+}
+
+.offcanvas-body .toggle-dropdown  {
+	text-align: center;
+}
+
+#Search-bar .btn, input {
+   border-radius: 0 !important;
+   border: solid gray;
+}
+
+#Content {
+   height: 90vh;
+   background-color: #D9D9D9;
+   overflow: auto;
+   padding-top: 10px;
+   justify-content: center;
+}
+
+#Content .Apps {
+	width: 47%;
+  border: solid;
+  background-color: white;
+  cursor: pointer;
+  margin-bottom: 11px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 2px gray;
+}
+
+.Apps-Container, #Games, #Apps  {
+	height: fit-content;
+}
+
+.App-Game-Section {
+	margin: 0;
+  height: fit-content;
+}
+
+.App-Game-Section-h4 {
+	background-color: #333333;
+	height: 5vh;
+	border: solid;
+	margin-bottom: 7px;
+}
+
+.App-Game-Section-h4 a {
+	color: gray;
+	transition: color 0.3s;
+	text-decoration: none;
+}
+
+.App-Game-Section-h4 a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+/* homepage */
+
+#Top-Apps-and-Games h4 {
+	color: gray;
+}
+
+#Content #Image-Container {
+ 	border-bottom: solid;
+}
+
+#Content #Image {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0;
+}
+
+.fa-star {
+  color: gray;
+}
+
+.checked {
+  color: orange;
+}
+
+/* download-page */
+
+#Download-Page-Image {
+	width: 100%;
+	height: 100%;
+	border: solid;
+	border-radius: 30px;
+}
+
+#Download-Page-Button {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-color: #999999;
+}
+
+#App-Info-h4 {
+ padding-right: 10px; 
+ margin-top: 5%;
+}
+
+#App-Info-p .col-5 {
+	margin-bottom: -2px; 
+}
+
+#App-Info-h4{
+	background-color: #999999;
+}
+
+#App-Name,
+#Category,
+#Version,
+#Requirement,
+#File-Size {
+  color: gray;
+}
+
+hr {
+	margin-bottom: 0; 
+}
+
+#Description {
+	margin: 0;
+	padding: 0
+}
+
+#Description-h4 {
+	background-color: #999999;
+}
+
+/* apps or games page */
+
+#Games-filter h6, #Apps-filter h6 {
+	color: gray;
+	font-size: 4vw;
+	width: 100%;
+}
+
+#Games-filter, #Apps-filter {
+	background-color: #313131;
+	margin-bottom: 10px
+}
+
+#Games-filter #Downloads:hover,
+#Games-filter #Hot:hover,
+#Games-filter #Newest:hover,
+#Apps-filter #Downloads:hover,
+#Apps-filter #Hot:hover,
+#Apps-filter #Newest:hover {
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+#Games-filter #Downloads::selection,
+#Games-filter #Hot::selection,
+#Games-filter #Newest::selection,
+#Apps-filter #Downloads::selection,
+#Apps-filter #Hot::selection,
+#Apps-filter #Newest::selection {
+  background-color: transparent;
+}
+
+/* apps or games page pagination */
+
+.paginations li {
+  display: inline;
+}
+
+.paginations ul, ul, button {
+  cursor: pointer;
+}
+/*
+.paginations button {
+	background-color: #313131;
+	color: white;
+	border-color: gray;
+}
+
+.paginations button:hover {
+  color: #6c757d;
+  background-color: transparent;
+	cursor: pointer;
+  transition: color 1s;
+}
+*/
+
+/* Search Page */
+
+#Search-Page-h4 {
+  color: gray;
+}
