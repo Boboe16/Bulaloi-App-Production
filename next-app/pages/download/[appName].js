@@ -1,6 +1,6 @@
 import DownloadPage from '../../components/DownloadPageComponents/DownloadPage.js'
 
-export default function DownloadPagee({ data }) {
+export default function Page({ data }) {
   return <DownloadPage data={data} />;
 }
 
@@ -10,12 +10,16 @@ import path from 'path';
 export async function getStaticProps({ params }) {
   const { appName } = params;
 
+  // Base path
   const appsGamesDataPath = path.join(process.cwd(), 'public', 'apps-games-data');
+  
+  // The app path
   const appFilePath = path.join(appsGamesDataPath, 'apps', `${appName}.json`);
   const gameFilePath = path.join(appsGamesDataPath, 'games', `${appName}.json`);
   
   let data = {};
 
+  // If the JSON exist in one of the path read it 
   if (fs.existsSync(appFilePath)) {
       data = JSON.parse(fs.readFileSync(appFilePath, 'utf-8'));
   } else if (fs.existsSync(gameFilePath)) {

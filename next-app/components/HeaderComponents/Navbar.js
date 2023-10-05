@@ -3,6 +3,20 @@ import { useRouter } from 'next/router'
 function Navbar() {
 	const router = useRouter();
 
+  // This function is only for games & apps buttons and its dropdown buttons
+  // This does not include 'Home' & 'Visit our Youtube'
+  async function handleOnClickButton(appOrGame, category) {
+    const ourURL = window.location.href;
+
+    if (category) {
+      await router.push(`/${appOrGame}/${category}`);
+    } if (!category) {
+      await router.push(`/${appOrGame}`);
+    }  if (ourURL.includes(`/games`) || ourURL.includes(`/apps`)) {
+      await window.location.reload()
+    } 
+  }
+  
   return (
     <>
       <div id='OffCanvas' className="alert alert-info d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
@@ -33,14 +47,33 @@ function Navbar() {
 				        data-bs-dismiss="offcanvas"
                 data-bs-target="#offcanvasResponsive" 
                 type="button"
-                onClick={() => router.push('/games')}>
+                onClick={() => handleOnClickButton('games')}>
                   <p>Games</p>
                 </button>
                 <button type="button" className="col-2 toggle-dropdown btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                   <span className="toggle-dropdown visually-hidden">Toggle Dropdown</span>
                 </button>
                 <ul className="dropdown-menu">
-                  {/* ... */}
+                  <li>
+                    <button 
+                    type="button" 
+                    class="btn btn-secondary" 
+                    data-bs-dismiss="offcanvas"
+                    data-bs-target="#offcanvasResponsive" 
+                    onClick={() => handleOnClickButton('games', 'adventure')}>
+                      Adventure
+                    </button>
+                  </li>
+                  <li>
+                    <button 
+                    type="button" 
+                    class="btn btn-secondary" 
+                    data-bs-dismiss="offcanvas"
+                    data-bs-target="#offcanvasResponsive" 
+                    onClick={() => handleOnClickButton('games', 'action')}>
+                      Action
+                    </button>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -67,7 +100,7 @@ function Navbar() {
               type="button" 
               className="btn btn-secondary"
  							onClick={() => router.push('https://youtube.com/@bulaloitech')}>
-               <p> Our Youtube</p>
+               <p>Visit our Youtube</p>
               </button>
             </li>
           </ul>

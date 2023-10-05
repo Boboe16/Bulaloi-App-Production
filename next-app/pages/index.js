@@ -1,6 +1,6 @@
 import HomePage from '../components/HomePageComponents/HomePage.js'
 
-function Home({ data }) {
+function Page({ data }) {
   return (
   	<>
   		<HomePage data={data}/>
@@ -15,6 +15,6 @@ async function getServerSideProps() {
 	return { props: { data } };		
 }
 
-export default Home;
+export default Page;
 export { getServerSideProps };
 

@@ -68,8 +68,21 @@ li {
 	top: 7px;
 }
 
-.offcanvas-body .toggle-dropdown  {
-	text-align: center;
+.offcanvas-body .dropdown-menu.show {
+    width: auto;
+    background-color: lightgray;
+    display: block;
+}
+
+.offcanvas-body .dropdown-menu.show .btn {
+  background-color: transparent;
+  color: black;
+  border: none;
+
+}
+
+.offcanvas-body .dropdown-menu {
+  width: 406.6px;
 }
 
 #Search-bar .btn, input {
@@ -243,20 +256,6 @@ hr {
 .paginations ul, ul, button {
   cursor: pointer;
 }
-/*
-.paginations button {
-	background-color: #313131;
-	color: white;
-	border-color: gray;
-}
-
-.paginations button:hover {
-  color: #6c757d;
-  background-color: transparent;
-	cursor: pointer;
-  transition: color 1s;
-}
-*/
 
 /* Search Page */
 

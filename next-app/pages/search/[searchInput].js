@@ -1,6 +1,6 @@
 import SearchPage from '../../components/SearchPageComponents/SearchPage.js';
 
-function Search({ data }) {
+function Page({ data }) {
   return (
     <>
       <SearchPage data={data}/>
@@ -17,5 +17,5 @@ async function getServerSideProps(context) {
   return { props: { data } };
 }
 
-export default Search;
+export default Page;
 export { getServerSideProps };
