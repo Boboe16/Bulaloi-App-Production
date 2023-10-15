@@ -1,4 +1,5 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import DropdownMenuButtons from './DropdownMenuButtonsForNavbar';
 
 function Navbar() {
 	const router = useRouter();
@@ -54,26 +55,13 @@ function Navbar() {
                   <span className="toggle-dropdown visually-hidden">Toggle Dropdown</span>
                 </button>
                 <ul className="dropdown-menu">
-                  <li>
-                    <button 
-                    type="button" 
-                    class="btn btn-secondary" 
-                    data-bs-dismiss="offcanvas"
-                    data-bs-target="#offcanvasResponsive" 
-                    onClick={() => handleOnClickButton('games', 'adventure')}>
-                      Adventure
-                    </button>
-                  </li>
-                  <li>
-                    <button 
-                    type="button" 
-                    class="btn btn-secondary" 
-                    data-bs-dismiss="offcanvas"
-                    data-bs-target="#offcanvasResponsive" 
-                    onClick={() => handleOnClickButton('games', 'action')}>
-                      Action
-                    </button>
-                  </li>
+                  <DropdownMenuButtons category='Action' handleOnClickButton={() => handleOnClickButton('games', 'action')} />
+                  <DropdownMenuButtons category='Adventure' handleOnClickButton={() => handleOnClickButton('games', 'adventure')} />
+                  <DropdownMenuButtons category='Role-playing' handleOnClickButton={() => handleOnClickButton('games', 'role-playing')} />
+                  <DropdownMenuButtons category='Arcade' handleOnClickButton={() => handleOnClickButton('games', 'arcade')} />
+                  <DropdownMenuButtons category='FPS' handleOnClickButton={() => handleOnClickButton('games', 'fps')} />
+                  <DropdownMenuButtons category='Casual' handleOnClickButton={() => handleOnClickButton('games', 'casual')} />
+                  <DropdownMenuButtons category='Others' handleOnClickButton={() => handleOnClickButton('games', 'others')} />
                 </ul>
               </div>
             </li>
@@ -91,7 +79,12 @@ function Navbar() {
                   <span className="visually-hidden">Toggle Dropdown</span>
                 </button>
                 <ul className="dropdown-menu">
-                  {/* ... */}
+                  <DropdownMenuButtons category='Photo Editor' handleOnClickButton={() => handleOnClickButton('apps', 'photo editor')} />
+                  <DropdownMenuButtons category='Task & App Management' handleOnClickButton={() => handleOnClickButton('apps', 'task-app management')} />
+                  <DropdownMenuButtons category='Tools' handleOnClickButton={() => handleOnClickButton('apps', 'tools')} />
+                  <DropdownMenuButtons category='Video Player & Editor' handleOnClickButton={() => handleOnClickButton('apps', 'video player and editor')} />
+                  <DropdownMenuButtons category='Music' handleOnClickButton={() => handleOnClickButton('apps', 'music')} />
+                  <DropdownMenuButtons category='Productivity' handleOnClickButton={() => handleOnClickButton('apps', 'productivity')} />
                 </ul>
               </div>
             </li>

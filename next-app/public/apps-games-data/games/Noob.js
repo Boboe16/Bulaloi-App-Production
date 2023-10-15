@@ -1,13 +1,13 @@
 {
   "appOrGame": "Game",
   "appPicture": "Picture",
-  "appName": "Fantasticou Adventure",
-  "appRating": "3",
+  "appName": "Noob",
+  "appRating": "5",
   "appDownloadLink": "To your mom",
   "appDescription": "this sucks",
-  "appCategory": "hentai",
+  "appCategory": "Others",
   "appVersion": "1.20",
   "appRequirement": "Android 100",
   "appSize": "200gb",
-  "appDownloads": 53842
+  "appDownloads": 46890
 }

@@ -6,7 +6,7 @@ import img from './img.png';
 import Pagination from './Pagination.js';
 import AppFilterSection from './AppFilterSection';
 
-function AppGameSection({ id, data }) {
+function AppGameSection({ category, id, data }) {
   const router = useRouter();
 
   // State management
@@ -23,7 +23,7 @@ function AppGameSection({ id, data }) {
   async function mostDownloads(id) {
     try {
       const gamesOrApps = id.toLowerCase();
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sort-apps-apis/most-download/${gamesOrApps}/all`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sort-apps-apis/most-download/${gamesOrApps}/${category}`);
       const data = await res.json();
 
       // Update app data and reset current page
@@ -39,8 +39,9 @@ function AppGameSection({ id, data }) {
   async function newest(id) {
     try {
       const gamesOrApps = id.toLowerCase();
-      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sort-apps-apis/newest/${gamesOrApps}/all`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sort-apps-apis/newest/${gamesOrApps}/${category}`);
       const data = await response.json();
+      console.log(`${gamesOrApps} and ${category}`)
 
       // Update app data and reset current page
       setAppDataArray(arrayConverter(data));
@@ -55,7 +56,7 @@ function AppGameSection({ id, data }) {
   async function hot(id) {
     try {
       const gamesOrApps = id.toLowerCase();
-      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sort-apps-apis/hot/${gamesOrApps}/all`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sort-apps-apis/hot/${gamesOrApps}/${category}`);
       const data = await response.json();
 
       // Update app data and reset current page
@@ -75,7 +76,8 @@ function AppGameSection({ id, data }) {
   // Rendered component
   return (
     <div id={id} className="row justify-content-center App-Game-Section">
-      <AppFilterSection 
+      <AppFilterSection
+        category={category} 
         id={id} 
         mostDownloads={mostDownloads} 
         newest={newest} 

@@ -76,9 +76,17 @@ li {
 
 .offcanvas-body .dropdown-menu.show .btn {
   background-color: transparent;
+  width: 100%;
   color: black;
   border: none;
+}
 
+.offcanvas-body .dropdown-menu.show .btn:hover {
+  cursor: pointer;
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+  transition: color 0.3s;
 }
 
 .offcanvas-body .dropdown-menu {

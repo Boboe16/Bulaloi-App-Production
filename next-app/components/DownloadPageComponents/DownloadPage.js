@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { NextSeo } from 'next-seo';
 import Stars from './Stars.js';
 import Image from 'next/image';
 import Header from '../HeaderComponents/Header.js';

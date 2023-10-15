@@ -2,8 +2,15 @@ import AppOrGamePage from '../../components/AppOrGamePageComponents/AppOrGamePag
 import { useRouter } from 'next/router';
 
 function Page({ data }) {
-  console.log(data)
-  return <AppOrGamePage id='Games' sectionTitle='Games' title='Games' data={data} />
+  const router = useRouter();
+  const { category } = router.query;
+  
+  // If category exist render the AppOrGamePage component with category prop, if not then render without it
+  if (category) {
+    return <AppOrGamePage category={category} id='Games' title='Games' data={data} />
+  } else if (!category) {
+    return <AppOrGamePage category='all' id='Games' title='Games' data={data} />
+  }
 }
 
 async function getServerSideProps(context) {
@@ -11,6 +18,7 @@ async function getServerSideProps(context) {
 
   let data = null;
 
+  //If category exist fetch data with it as a URL parameter, if not then fetch without it
   if (category) {
     const res =  await fetch(`${process.env.NEXT_PUBLIC_URL}/api/apps-games/games/${category}`);
     data = await res.json();

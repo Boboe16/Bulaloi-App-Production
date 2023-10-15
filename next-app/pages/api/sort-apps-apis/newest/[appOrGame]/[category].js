@@ -43,7 +43,11 @@ export default function handler(req, res) {
       if (category == 'all') {
         return data;
       } else if (category) {
-        return data = data.filter(app => app.appCategory == category);
+        function capitalize(string) {
+          return `${string.charAt(0).toUpperCase() + string.slice(1)}`;
+        }
+
+        return data = data.filter(app => app.appCategory == capitalize(category));
       }
     }
 
