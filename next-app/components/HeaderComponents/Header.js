@@ -1,7 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import { useRouter } from 'next/router'
+import { useMediaQuery } from 'react-responsive'
 import Image from 'next/image'
-import NavBar from './Navbar.js'
+import Script from "next/script"
+import NavBarForMobileAndTabletDevices from './NavBarForMobileAndTabletDevices.js'
+import NavBarForDesktopDevices from './NavBarForDesktopDevices.js'
 import SearchBar from './Searchbar.js'
 import Bulaloi_Text from './bulaloi-text.png'
 import Search_Icon from './search-icon.png'
@@ -9,8 +12,23 @@ import Navbar_Icon from './navbar-icon.png'
 
 function Header() {
 	const router = useRouter()
+
   const [showSearchBar, setShowSearchBar] = useState(false)
   const searchRef = useRef(null)
+
+  const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 991px)'
+  })
+
+  const isPhoneOrTablet = useMediaQuery({
+    query: '(max-width: 990px)'
+  })
 
   const handleSearchButtonClick = () => {
     setShowSearchBar(prevShowSearchBar => !prevShowSearchBar)
@@ -53,25 +71,41 @@ function Header() {
 	  				onClick={() => router.push('/')} 
 	  			/>
         </div>
-        <div className='col-4 d-flex justify-content-end'>
-          <Image
-            id='Navbar-button'
-            className='col-2'
-            src={Navbar_Icon}
-            alt='navbar-button'
-            data-bs-toggle='offcanvas'
-            data-bs-target='#offcanvasResponsive'
-            aria-controls='offcanvasResponsive'
-          />
-        </div>
+          { isPhoneOrTablet && isClient &&
+            <div className='col-4 d-flex justify-content-end'>
+              <Image
+                id='Navbar-button'
+                className='col-2'
+                src={Navbar_Icon}
+                alt='navbar-button'
+                data-bs-toggle='offcanvas'
+                data-bs-target='#offcanvasResponsive'
+                aria-controls='offcanvasResponsive'
+              />
+            </div>
+          }
       </div>
 
       {showSearchBar && <SearchBar ref={searchRef} />}
-      <NavBar />
+      
+      { isPhoneOrTablet && isClient && <NavBarForMobileAndTabletDevices /> }
+      { isDesktopOrLaptop && isClient && <NavBarForDesktopDevices /> }
+
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4230199495923533"
+      crossorigin="anonymous" />
+      
+      <ins className="adsbygoogle"
+           style={{display: 'block'}}
+           data-ad-client="ca-pub-4230199495923533"
+           data-ad-slot="5457315583"
+           data-ad-format="auto"
+           data-full-width-responsive="true">
+      </ins>
+      <Script id='google-script'>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </Script>
     </>
   )
 }
 
 export default Header
-
-

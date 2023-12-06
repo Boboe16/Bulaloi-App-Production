@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Stars from './Stars.js';
-import img from './img.png';
-import Image from 'next/image';
+import imageIcon from './image-icon.png';
+import ImageComponent from './ImageComponent.js';
 
 function AppGameSection({ id, title, objects, path, link }) {
   const router = useRouter();
@@ -26,7 +26,7 @@ function AppGameSection({ id, title, objects, path, link }) {
           	onClick={() => router.push(`/download/${object.appName}`)}
         	>
           	<div id='Image-Container' className='row'>
-            	<Image id='Image' src={img} alt='img' />
+              <ImageComponent id='Image' appPicture={object.appPicture} imageIcon={imageIcon} />
           	</div>
           	<h6 className='text-center'>{object.appName}</h6>
           	<div className='text-center'>

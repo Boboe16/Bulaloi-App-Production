@@ -6,17 +6,36 @@ import Image from 'next/image';
 import Header from '../HeaderComponents/Header.js';
 import AppInfo from './AppInfo';
 import Description from './Description';
-import img from './img.png';
+import imageIcon from './image-icon.png';
+import ImageComponent from './ImageComponent.js';
 
 function DownloadPage({ data }) {
-  const router = useRouter(); // Soon to be used with download btn
+  const router = useRouter();
 
   return (
     <>
       <Header />
+      <NextSeo
+        title={data.appName}
+        description={data.appDescription}
+        openGraph={{
+          url: `${process.env.NEXT_PUBLIC_URL}/download/${data.appName}`,
+          title: `Download ${data.appName} for free`,
+          description: `${data.appDescription}`,
+          images: [
+            {
+              url: `${data.appPicture}`,
+              width: 512,
+              height: 512,
+              alt: "image",
+            },
+          ],
+          site_name: "Bulaloi",
+        }}
+      />
       <div id='Content' className='row'>
-        <div className='row'>
-          <Image id='Download-Page-Image' src={img} alt='img' />
+        <div id='Download-Page-Image-Container'>
+          <ImageComponent id='Download-Page-Image' appPicture={data.appPicture} imageIcon={imageIcon} />
         </div>
         <div className='row text-center'>
           <h3>{data.appName}</h3>

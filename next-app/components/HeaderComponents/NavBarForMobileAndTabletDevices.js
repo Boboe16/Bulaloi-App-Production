@@ -72,7 +72,7 @@ function Navbar() {
                 data-bs-dismiss="offcanvas"
                 data-bs-target="#offcanvasResponsive"
                 type="button"
-								onClick={() => router.push('/apps')}>
+								onClick={() => handleOnClickButton('apps')}>
                   <p>Apps</p>
                 </button>
                 <button type="button" className="col-2 toggle-dropdown btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">

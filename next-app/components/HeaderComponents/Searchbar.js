@@ -24,9 +24,9 @@ function SearchBar(props, ref) {
 
   return (
     <div id='Search-bar' className='row' ref={ref}>
-      <input type='text' id='Search-input' className='col-9' placeholder='Search'
+      <input type='text' id='Search-Input' className='col-9' placeholder='Search'
       value={inputValue} onChange={handleOnChange}/>
-      <button type="button" className="col-3 btn btn-light"
+      <button id='Search-Button' type="button" className="col-3 btn btn-light"
       onClick={handleClick}
       >
         Search

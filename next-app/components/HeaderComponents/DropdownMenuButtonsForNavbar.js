@@ -1,15 +1,15 @@
-export default function DropdownMenuButtonsForNavbar({ category, handleOnClickButton } ) {
+export default function DropdownMenuButtonsForNavbar({isDesktop, category, handleOnClickButton } ) {
 	return (
-	    <>
-		    <li>
-		    	<button 
-            type="button" 
-            className="btn btn-secondary" 
-            data-bs-dismiss="offcanvas"
-            data-bs-target="#offcanvasResponsive" 
-            onClick={handleOnClickButton}>
-              { category }
-          </button>
+    <>
+	    <li>
+				<button 
+				  type="button" 
+				  className="btn btn-secondary"
+				  data-bs-dismiss={isDesktop ? null : "offcanvas"}
+				  data-bs-target={isDesktop ? null : "#offcanvasResponsive"}
+				  onClick={handleOnClickButton}>
+				  { category }
+				</button>
 			</li>
 		</>
 	)

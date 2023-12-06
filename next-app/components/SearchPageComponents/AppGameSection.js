@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Stars from './Stars';
-import img from './img.png';
 import Pagination from './Pagination.js';
+import imageIcon from './image-icon.png';
+import ImageComponent from './ImageComponent.js';
 
 function AppGameSection({ data }) {
   const router = useRouter();
@@ -37,7 +38,7 @@ function AppGameSection({ data }) {
             onClick={() => router.push(`/download/${app[2]}`)}
           >
             <div id='Image-Container' className='row justify-content-center'>
-              <Image id='Image' src={img} alt='img' />
+              <ImageComponent id='Image' appPicture={app[1]} imageIcon={imageIcon} />
             </div>
             <h6 className='text-center'>{app[2]}</h6>
             <div className='text-center'>

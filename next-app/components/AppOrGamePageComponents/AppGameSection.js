@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Stars from './Stars';
-import img from './img.png';
 import Pagination from './Pagination.js';
 import AppFilterSection from './AppFilterSection';
+import imageIcon from './image-icon.png';
+import ImageComponent from './ImageComponent.js';
 
 function AppGameSection({ category, id, data }) {
   const router = useRouter();
@@ -41,7 +42,7 @@ function AppGameSection({ category, id, data }) {
       const gamesOrApps = id.toLowerCase();
       const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/sort-apps-apis/newest/${gamesOrApps}/${category}`);
       const data = await response.json();
-      console.log(`${gamesOrApps} and ${category}`)
+      //console.log(`${gamesOrApps} and ${category}`)
 
       // Update app data and reset current page
       setAppDataArray(arrayConverter(data));
@@ -92,7 +93,7 @@ function AppGameSection({ category, id, data }) {
             onClick={() => router.push(`/download/${app[2]}`)}
           >
             <div id='Image-Container' className='row justify-content-center'>
-              <Image id='Image' src={img} alt='img' />
+              <ImageComponent id='Image' appPicture={app[1]} imageIcon={imageIcon} />
             </div>
             <h6 className='text-center'>{app[2]}</h6>
             <div className='text-center'>
