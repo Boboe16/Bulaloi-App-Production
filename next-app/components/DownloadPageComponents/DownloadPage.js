@@ -16,7 +16,7 @@ function DownloadPage({ data }) {
     <>
       <Header />
       <NextSeo
-        title={data.appName}
+        title={`Download ${data.appName} for free`}
         description={data.appDescription}
         openGraph={{
           url: `${process.env.NEXT_PUBLIC_URL}/download/${data.appName}`,
