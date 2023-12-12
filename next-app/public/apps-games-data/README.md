@@ -43,6 +43,28 @@ Each JSON file should follow the following structure:
 
 - `appSize` (optional): The size of the app in terms of storage space required (can be omitted if not applicable).
 
+### Category Rules
+
+If you put the value in category's property its should be like this.
+
+for games:
+
+1. `action`
+2. `role-playing`
+3. `adventure`
+4. `casual`
+4. `others`
+5. `fps`
+6. `arcade`
+
+for apps:
+
+1. `phone editor`
+2. `task-app management`
+3. `video player and editor`
+4. `music`
+5. `productivity`
+
 ### Folder Structure
 
 The JSON files are organized into the following folders:
@@ -51,7 +73,7 @@ The JSON files are organized into the following folders:
 
 2. `games`: Contains JSON files representing different games.
 
-3. `featured-games`: Contains JSON files representing featured games.
+3. `featured-games`: Contains one JSON file representing featured games.
 
 4. `all-apps-games`: Contains JSON files representing a combined list of both apps and games.
 
