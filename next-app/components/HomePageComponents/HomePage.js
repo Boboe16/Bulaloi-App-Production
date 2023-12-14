@@ -3,7 +3,6 @@ import AppGameSection from './AppGameSection.js';
 
 function HomePage({ data }) {
 	const [games, apps, featuredAppsAndGames] = data;
-	console.log(data)
 	return (
 		<>
 			<Header />
