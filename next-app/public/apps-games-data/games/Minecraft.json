@@ -1,13 +1,13 @@
 {
   "appOrGame": "Game",
-  "appPicture": "https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png",
+  "appPicture": "https://cdn-bgp.bluestacks.com/BGP/us/gametiles_com.mojang.minecraftpe.jpg",
   "appName": "Minecraft",
-  "appRating": "2",
-  "appDownloadLink": "To your mom",
-  "appDescription": "this sucks",
+  "appRating": "5",
+  "appDownloadLink": "https://direct-link.net/1021713/minecraft-bedrock",
+  "appDescription": "In Minecraft, players explore a blocky, pixelated procedurally generated, three-dimensional world with virtually infinite terrain. Players can discover and extract raw materials, craft tools and items, and build structures, earthworks, and machines.",
   "appCategory": "Adventure",
-  "appVersion": "1.20",
-  "appRequirement": "Android 100",
-  "appSize": "200gb",
-  "appDownloads": 8412
+  "appVersion": "1.20.50",
+  "appRequirement": "Android 5 or Above",
+  "appSize": "218",
+  "appDownloads": 10000000
 }
