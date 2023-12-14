@@ -13,7 +13,6 @@ export default function handler(req, res) {
     // read the file names from the directories
     const gamesFileNames = fs.readdirSync(gamesDirectory);
     const appsFileNames = fs.readdirSync(appsDirectory); 
-    const featuredAppsAndGamesFileNames = fs.readdirSync(featuredAppsAndGamesDirectory); 
     
     // initialize an empty array to store the JSON data
     const jsonDataArray = [[], []];
@@ -34,8 +33,8 @@ export default function handler(req, res) {
     }
 
     // call the helper function for the games and apps data
-    pushIntoJsonDataArray(gamesFileNames, gamesDirectory, 0);
-    pushIntoJsonDataArray(appsFileNames, appsDirectory, 1);
+    pushIntoJsonDataArray(gamesFileNames, gamesDirectory, 0); // index 0 for games data
+    pushIntoJsonDataArray(appsFileNames, appsDirectory, 1); // index 1 for apps data
 
     // read the featured apps and games data from the file
     const featuredFilePath = path.join(featuredAppsAndGamesDirectory, 'featured-apps-games.json');
@@ -45,8 +44,10 @@ export default function handler(req, res) {
     const appsAndGames = [...jsonDataArray[0] , ...jsonDataArray[1]];
     // convert the featured apps and games object into an array of values
     const convertedArrayOfFeaturedPropertyValues = Object.values(featuredJsonData)
+    // filter the array of values to keep only the ones that match the app or game names in the appsAndGames array
+    const filteredFeaturedPropertyValues = convertedArrayOfFeaturedPropertyValues.filter(featureAppName => appsAndGames.some(appOrGame => appOrGame.appName === featureAppName));
     // filter the apps and games data based on the featured apps and games names
-    const filteredAppsAndGames = convertedArrayOfFeaturedPropertyValues.map((featureAppName) => {
+    const filteredAppsAndGames = filteredFeaturedPropertyValues.map((featureAppName) => {
       // loop through the apps and games data
       for (let i = 0; i < appsAndGames.length; i++) {
         // check if the app or game name matches the featured app or game name
@@ -57,7 +58,7 @@ export default function handler(req, res) {
       }
     })
     // push the filtered apps and games data into the array
-    jsonDataArray.push(filteredAppsAndGames);
+    jsonDataArray.push(filteredAppsAndGames); // index 2 for featured apps and games data
 
     // return a successful response with the JSON data array
     return res.status(200).json(jsonDataArray);
