@@ -14,7 +14,7 @@ function Pagination({ currentPage, setCurrentPage, appNames, updateAppList }) {
     // I defined this function to avoid the error(what was it again? xD)
   	function toUpdateAppNamesAndRerender() {
   		updateAppList(currentAppNames)
-      console.log(currentAppNames)
+      // console.log(currentAppNames)
   	}
 
   	toUpdateAppNamesAndRerender();
