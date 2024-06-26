@@ -1,13 +1,13 @@
 {
   "appOrGame": "Game",
   "appPicture": "https://cdn-bgp.bluestacks.com/BGP/us/gametiles_com.mojang.minecraftpe.jpg",
-  "appName": "Minecraft 1.21.23 BETA",
+  "appName": "Minecraft 1.21.23",
   "appRating": "5",
   "appDownloadLink": "https://direct-link.net/1021713/minecraft-bedrock",
   "appDescription": "In Minecraft, players explore a blocky, pixelated procedurally generated, three-dimensional world with virtually infinite terrain. Players can discover and extract raw materials, craft tools and items, and build structures, earthworks, and machines.",
   "appCategory": "Adventure",
-  "appVersion": "1.20.50",
+  "appVersion": "1.21.23",
   "appRequirement": "Android 5 or Above",
-  "appSize": "218MB",
+  "appSize": "839MB",
   "appDownloads": 10000000
 }
