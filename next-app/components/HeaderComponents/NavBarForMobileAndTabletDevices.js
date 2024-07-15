@@ -13,7 +13,7 @@ function Navbar() {
       await router.push(`/${appOrGame}/${category}`);
     } if (!category) {
       await router.push(`/${appOrGame}`);
-    }  if (ourURL.includes(`/games`) || ourURL.includes(`/apps`)) {
+    } if (ourURL.includes(`/games`) || ourURL.includes(`/apps`)) {
       await window.location.reload()
     } 
   }
@@ -61,6 +61,7 @@ function Navbar() {
                   <DropdownMenuButtons category='Arcade' handleOnClickButton={() => handleOnClickButton('games', 'arcade')} />
                   <DropdownMenuButtons category='FPS' handleOnClickButton={() => handleOnClickButton('games', 'fps')} />
                   <DropdownMenuButtons category='Casual' handleOnClickButton={() => handleOnClickButton('games', 'casual')} />
+                  <DropdownMenuButtons category='Addons and mods' handleOnClickButton={() => handleOnClickButton('games', 'addons')} />
                   <DropdownMenuButtons category='Others' handleOnClickButton={() => handleOnClickButton('games', 'others')} />
                 </ul>
               </div>

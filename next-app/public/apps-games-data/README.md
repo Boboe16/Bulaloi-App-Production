@@ -56,6 +56,7 @@ for games:
 4. `others`
 5. `fps`
 6. `arcade`
+7. `addons and mods`
 
 for apps:
 
