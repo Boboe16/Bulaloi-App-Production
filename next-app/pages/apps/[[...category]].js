@@ -18,7 +18,7 @@ async function getServerSideProps(context) {
 
   let data = null;
 
-  //If category exist fetch data with it as a URL parameter, if not then fetch without it
+  // If category exist fetch data with it as a URL parameter, if not then fetch without it
   if (category) {
     const res =  await fetch(`${process.env.NEXT_PUBLIC_URL}/api/apps-games/apps/${category}`);
     data = await res.json();

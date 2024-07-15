@@ -61,7 +61,7 @@ function Navbar() {
                   <DropdownMenuButtons category='Arcade' handleOnClickButton={() => handleOnClickButton('games', 'arcade')} />
                   <DropdownMenuButtons category='FPS' handleOnClickButton={() => handleOnClickButton('games', 'fps')} />
                   <DropdownMenuButtons category='Casual' handleOnClickButton={() => handleOnClickButton('games', 'casual')} />
-                  <DropdownMenuButtons category='Addons and mods' handleOnClickButton={() => handleOnClickButton('games', 'addons')} />
+                  <DropdownMenuButtons category='Addons and mods' handleOnClickButton={() => handleOnClickButton('games', 'addons and mods')} />
                   <DropdownMenuButtons category='Others' handleOnClickButton={() => handleOnClickButton('games', 'others')} />
                 </ul>
               </div>
