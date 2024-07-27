@@ -1,13 +1,13 @@
 {
-  "appOrGame": "App",
-  "appPicture": "https://img.utdstc.com/icon/06e/e9c/06ee9c6f55d3259cddfe0622cacc457f40c360b90a8c8975a492e0b36c608b0b:100",
-  "appName": "Game Booster 4x Faster Pro",
-  "appRating": "5",
-  "appDownloadLink": "https://link-center.net/1021713/game-booster-4x-faster",
-  "appDescription": "Basically this Game Booster 4x Faster come with lots of features that make your device faster like System Performance Tuner, boosts the device, Use AI, RAM-Free Tweak, and also many others. It's also provided GFX tool which will be help you to change the resolution of the game.",
-  "appCategory": "Task-app management",
-  "appVersion": "1.2.6",
-  "appRequirement": "Android 5 or Above",
-  "appSize": "4.32 MB",
-  "appDownloads": "400000"
+    "appOrGame": "App",
+    "appPicture": "https://img.utdstc.com/icon/06e/e9c/06ee9c6f55d3259cddfe0622cacc457f40c360b90a8c8975a492e0b36c608b0b:100",
+    "appName": "Game Booster 4x Faster Pro",
+    "appRating": "4",
+    "appDownloadLink": "https://link-center.net/1021713/game-booster-4x-faster",
+    "appDescription": "Basically this Game Booster 4x Faster come with lots of features that make your device faster like System Performance Tuner, boosts the device, Use AI, RAM-Free Tweak, and also many others. It's also provided GFX tool which will be help you to change the resolution of the game.",
+    "appCategory": "Game Category",
+    "appVersion": "1.2.6",
+    "appRequirement": "Android 5 or Above",
+    "appSize": "4.32 MB",
+    "appDownloads": null
 }
