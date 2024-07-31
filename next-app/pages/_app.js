@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         {/*<meta name="google-adsense-account" content="ca-pub-4230199495923533" /> {/*Verification Tag for Google Adsense*/}
-        <meta name='admaven-placement' content=BrHYHpjU6 />
+        <meta name="admaven-placement" content="BrHYHpjU6" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
 		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="icon" href="/B-icon.png" />
