@@ -8,6 +8,7 @@ import AppInfo from './AppInfo';
 import Description from './Description';
 import imageIcon from './image-icon.png';
 import ImageComponent from './ImageComponent.js';
+import Footer from '../GlobalComponents/Footer.js';
 
 function DownloadPage({ data }) {
   const router = useRouter();
@@ -66,6 +67,7 @@ function DownloadPage({ data }) {
           <p>{data.appDescription}</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import Stars from './Stars';
 import Pagination from './Pagination.js';
 import AppFilterSection from './AppFilterSection';

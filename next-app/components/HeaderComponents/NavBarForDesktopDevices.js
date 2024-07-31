@@ -78,7 +78,7 @@ function Navbar() {
             <button 
             type="button" 
             className="col-12 btn btn-dark"
-  						onClick={() => router.push('https://youtube.com/@bulaloitech')}>
+  						onClick={() => router.push('http://www.youtube.com/@amethepuny2260')}>
              <p>Visit our Youtube</p>
             </button>
           </li>

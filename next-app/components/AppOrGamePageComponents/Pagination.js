@@ -114,7 +114,7 @@ function Pagination({ currentPage, setCurrentPage, appNames, updateAppList }) {
   };
 
   return (
-    <div className='row justify-content-center paginations'>
+    <div id='' className='row justify-content-center paginations'>
       <div className="row">
         <ul>
           {generatePaginationButtons()}

@@ -61,6 +61,7 @@ function Navbar() {
                   <DropdownMenuButtons category='Arcade' handleOnClickButton={() => handleOnClickButton('games', 'arcade')} />
                   <DropdownMenuButtons category='FPS' handleOnClickButton={() => handleOnClickButton('games', 'fps')} />
                   <DropdownMenuButtons category='Casual' handleOnClickButton={() => handleOnClickButton('games', 'casual')} />
+                  <DropdownMenuButtons isDesktop={true} category='Addons and mods' handleOnClickButton={() => handleOnClickButton('games', 'addons and mods')} />
                   <DropdownMenuButtons category='Others' handleOnClickButton={() => handleOnClickButton('games', 'others')} />
                 </ul>
               </div>
@@ -92,7 +93,7 @@ function Navbar() {
               <button 
               type="button" 
               className="btn btn-secondary"
- 							onClick={() => router.push('https://youtube.com/@bulaloitech')}>
+ 							onClick={() => router.push('http://www.youtube.com/@amethepuny2260')}>
                <p>Visit our Youtube</p>
               </button>
             </li>

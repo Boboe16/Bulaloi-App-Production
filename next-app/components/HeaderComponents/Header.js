@@ -90,20 +90,6 @@ function Header() {
       
       { isPhoneOrTablet && isClient && <NavBarForMobileAndTabletDevices /> }
       { isDesktopOrLaptop && isClient && <NavBarForDesktopDevices /> }
-
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4230199495923533"
-      crossorigin="anonymous" />
-      
-      <ins className="adsbygoogle"
-           style={{display: 'block'}}
-           data-ad-client="ca-pub-4230199495923533"
-           data-ad-slot="5457315583"
-           data-ad-format="auto"
-           data-full-width-responsive="true">
-      </ins>
-      <Script id='google-script'>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </Script>
     </>
   )
 }
