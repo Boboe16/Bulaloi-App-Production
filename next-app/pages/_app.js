@@ -8,7 +8,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         {/*<meta name="google-adsense-account" content="ca-pub-4230199495923533" /> {/*Verification Tag for Google Adsense*/}
-          <Script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1073098"></Script>
         <meta name="admaven-placement" content="BrHYHpjU6" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -33,6 +32,7 @@ function MyApp({ Component, pageProps }) {
           site_name: "BULALOI - Download free games/apps and programs, read the latest news",
         }}
       />
+      <Script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1073098"></Script>
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"/>
   	  <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"/>
       {/*<Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4230199495923533" crossorigin="anonymous" /> Tag that generate Google adsense ads*/}
