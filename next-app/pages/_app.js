@@ -7,7 +7,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {/*<meta name="google-adsense-account" content="ca-pub-4230199495923533" /> {/*Verification Tag for Google Adsense*/}
         <meta name="admaven-placement" content="BrHYHpjU6" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -23,7 +22,7 @@ function MyApp({ Component, pageProps }) {
           description: "Download free and without registration, full versions of any games/apps and programs on your device, as well as their modifications. Latest news - technology/market IT/mobile games",
           images: [
             {
-              url: "https://wpuploads.appadvice.com/wp-content/uploads/2011/05/apps_sale4.jpg",
+              url: "https://budli.in/blog/wp-content/uploads/2018/01/Best-Android-Games-800x405.png",
               width: 512,
               height: 512,
               alt: "image",
