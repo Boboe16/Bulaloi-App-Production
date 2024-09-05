@@ -123,6 +123,8 @@
   
   #NavbarForDesktop .btn {
     border-radius: 0;
+    font-size: x-large;
+    font-weight: 500;
   }
   
   #NavbarForDesktop .dropdown-menu.show {
@@ -188,13 +190,26 @@
     box-shadow: 0px 3px 2px gray;
   }
   
-  .Apps-Container, #Games, #Apps  {
+  .Apps-Container {
       height: fit-content;
+  }
+
+  #Games, #Apps {
+    height: 90vh;
+    overflow-y: auto;
   }
   
   .App-Game-Section {
-      margin: 0;
+    margin: 0;
     height: fit-content;
+  }
+  
+  @media (min-width: 650px) {
+    .Apps-Container {
+      height: fit-content;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
   }
   
   .App-Game-Section-h4 {
@@ -327,9 +342,9 @@
   
   /* apps or games page */
   
-  #Games-filter h6, #Apps-filter h6 {
+  #Games-filter h4, #Apps-filter h4 {
       color: gray;
-      font-size: 4vw;
+      /* font-size: 4vw; */
       width: 100%;
   }
   
