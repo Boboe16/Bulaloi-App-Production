@@ -32,10 +32,9 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       {/*AddMaven ads*/}
-      <Script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1073128"></Script> {/*in-page push */}
       <Script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1073098"></Script> {/*pop up */}
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"/>
-  	  <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"/>
+      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"/>
       {/*<Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4230199495923533" crossorigin="anonymous" /> Tag that generate Google adsense ads*/}
       <Component {...pageProps} />
     </>
